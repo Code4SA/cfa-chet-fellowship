@@ -23,7 +23,7 @@
 }
 
 .well {
-   margin-top: 0px;
+   margin-top: 20px;
    margin-bottom: 0;
 }
 
@@ -31,6 +31,10 @@
    color: #FFF;
    background-color: #333332;
    border-color: #333332;
+}
+
+.nav {
+   margin-bottom: 20px;
 }
 
 hr {
