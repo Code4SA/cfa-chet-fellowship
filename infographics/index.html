@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/exportexcel.js"></script>
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
@@ -32,6 +33,7 @@
 
 <div class="col-sm-6">
 <a href="images/sa-post-school-system.png" data-lightbox="sa-post-school-system"><img src="images/sa-post-school-system.jpg" width=100%></a>
+
 </div>
 
 
@@ -57,7 +59,7 @@
 <div class="panel-body">
 
 <p>
-<table class="table .table-responsive table-hover">
+<table id="sapss-table" class="table .table-responsive table-hover">
 <thead><th></th><th></th><th>2010</th><th>2014</th></tr></thead>
 <tbody>
  <tr><td>University students</td><td>Public</td><td>892936</td><td>969155</td></tr>
@@ -69,6 +71,7 @@
  <tr><td>Not in education</td><td></td><td>2781185</td><td>3001000</td></tr>
 </tbody>
 </table>
+<a id="dlink"  style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('sapss-table', 'SA Post School System.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download table</a>
 <p>
 
 </div>
@@ -107,18 +110,15 @@
 <div class="panel-body">
 
 <p>
-<table class="table .table-responsive table-hover">
-<thead><th></th><th></th><th>2010</th><th>2014</th></tr></thead>
-<tbody>
- <tr><td>University students</td><td>Public</td><td>892936</td><td>969155</td></tr>
- <tr><td></td><td>Private</td><td>93623</td><td>67933</td></tr>
- <tr><td>College students</td><td>Public</td><td>326889</td><td>702383</td></tr>
- <tr><td></td><td>Private</td><td>77960</td><td>78995</td></tr>
- <tr><td>Adult education & training students</td><td>Public</td><td>297491</td><td>262621</td></tr>
- <tr><td></td><td>Private</td><td></td><td>7560</td></tr>
- <tr><td>Not in education</td><td></td><td>2781185</td><td>3001000</td></tr>
+<table id="saheis-table" class="table .table-responsive table-hover">
+<thead><th></th><th>2000 (Rand, in billion)</th><th>2000 (% of total)</th><th>2013 (Rand, in billion)</th><th>2013 (% of total)</th></tr></thead><tbody>
+ <tr><td>Third stream</td><td>8.78</td><td>27%</td><td>14.26</td><td>27%</td></tr>
+ <tr><td>Student fees</td><td>7.8</td><td>24%</td><td>17.83</td><td>33%</td></tr>
+ <tr><td>Government</td><td>15.93</td><td>49%</td><td>21.21</td><td>40%</td></tr>
+ <tr><td>Total</td><td>32.51</td><td>&nbsp;</td><td>53.3</td><td></td></tr>
 </tbody>
 </table>
+<a id="dlink"  style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('saheis-table', 'SA Higher Education Income Sources.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download table</a>
 <p>
 
 </div>
@@ -143,10 +143,17 @@
 <div class="col-sm-5 col-sm-offset-1">
 <div class="well">
         <h4>Number of doctoral graduates</h4>
-        <p><i class="fa fa-table fa-fw"></i> Source</p>
+        <p><i class="fa fa-book fa-fw"></i> Doctoral Education in South Africa, page 54</p>
+	<p>
+	<div class="btn-group" role="group">
+	  <a class="btn btn-default" data-toggle="collapse" href="#docgradnumbers">Table <i class="fa fa-caret-down"></i></a>
+	  <a class="btn btn-default" data-toggle="collapse" href="#docgradnumbers-context">Context <i class="fa fa-caret-down"></i></a>
+	  <a href="http://www.chet.org.za/download/file/fid/915" target="_blank" type="button" class="btn btn-default"><i class="fa fa-download"></i> Chapter</a>
+	  <a href="http://www.chet.org.za/download/file/fid/909" target="_blank" type="button" class="btn btn-default"><i class="fa fa-download"></i> Book</a>
+	</div>
+	</p>
         <p><i class="fa fa-user fa-fw"></i> Creator</p>
         <p><i class="fa fa-calendar-o fa-fw"></i> Date</p>
-        <p><a class="btn btn-primary" data-toggle="collapse" href="#docgradnumbers">Table <i class="fa fa-caret-down"></i></a></p>
 </div>
 </div>
 
@@ -156,17 +163,41 @@
 
 <div class="panel-group">
 <div class="panel panel-default panel-table">
+
+<div id="docgradnumbers-context" class="panel-collapse collapse">
+<div class="panel-body">
+<blockquote>
+  <p>If the factors of population size and GDP ranking are combined, Korea
+(50 million, 15 GDP), Italy (60 million, 9 GDP) and Turkey (74 million, 17
+GDP) are closest to South Africa (51 million, 28 GDP) (World Bank 2012).
+In terms of total number of PhD graduates, Turkey (4 653) outperformed
+South Africa (1 576) by three times, and Korea (11 645) and Italy (11 270) each
+produced seven times more graduates than South Africa. The same applies
+to the proportion of doctorates in science, engineering and technology.</p>
+</blockquote>
+</div>
+</div>
+
 <div id="docgradnumbers" class="panel-collapse collapse">
 <div class="panel-body">
 
 <p>
-<table class="table .table-responsive table-hover">
-<!-- insert table -->
-</table>
+<table id="docgradnumbers-table" class="table .table-responsive table-hover">
+<thead><th>Total</th><th>2000</th><th>2011</th></tr></thead><tbody>
+ <tr><td>South Africa</td><td>971</td><td>1576</td></tr>
+ <tr><td>Italy</td><td>3557</td><td>11270</td></tr>
+ <tr><td>Korea</td><td>4335</td><td>11645</td></tr>
+<thead><th>Set</th><th> </th><th> </th></tr></thead><tbody>
+ <tr><td>South Africa</td><td>400</td><td>854</td></tr>
+ <tr><td>Italy</td><td>2415</td><td>7190</td></tr>
+ <tr><td>Korea</td><td>4335</td><td>6954</td></tr>
+</tbody></table>
+<a id="dlink"  style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('docgradnumbers-table', 'Number of doctoral graduates.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download table</a>
 <p>
 
 </div>
 </div>
+
 </div>
 </div>
 

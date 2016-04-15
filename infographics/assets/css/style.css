@@ -40,3 +40,8 @@
 hr {
    margin-top: 0px;
 }
+
+blockquote {
+   padding-bottom: 0px;
+   font-size: inherit;
+}
