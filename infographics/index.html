@@ -9,6 +9,7 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/exportexcel.js"></script>
+<script src="assets/js/tablink.js"></script>
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
@@ -17,10 +18,10 @@
 
 <body style="width: 960px;">
 
-<ul class="nav nav-tabs" id="menu">
-<li class="active"><a data-target="#saes" data-toggle="tab">South African Education system</a></li>
-<li><a data-target="#docedu" data-toggle="tab">Doctoral Education</a></li>
-<li><a data-target="#knowledgeproduction" data-toggle="tab">Knowledge Production</a></li>
+<ul class="nav nav-tabs navbar-fixed-top navbar-inverse" id="menu">
+<li class="active"><a href="#saes" data-toggle="tab" onclick="window.scrollTo(0,0)">South African Education system</a></li>
+<li><a href="#docedu" data-toggle="tab" onclick="window.scrollTo(0,0)">Doctoral Education</a></li>
+<li><a href="#knowledgeproduction" data-toggle="tab" onclick="window.scrollTo(0,0)" >Knowledge Production</a></li>
 </ul>
 
 			<div class="tab-content">
@@ -132,7 +133,7 @@
 
 <!-- tab border -->
 
-			<div class="tab-pane fade" id="docedu">
+			<div class="tab-pane" id="docedu">
 
 	<div class="row">
 
@@ -535,7 +536,7 @@ to the proportion of doctorates in science, engineering and technology.</p>
 <!-- tab border -->
 
 
-			<div class="tab-pane fade" id="knowledgeproduction">
+			<div class="tab-pane" id="knowledgeproduction">
 <!-- graphic start -->
 	<div class="row">
 
@@ -581,5 +582,21 @@ to the proportion of doctorates in science, engineering and technology.</p>
 
 				</div>
 </body>
-<script src="assets/js/lightbox.min.js"></script>
+<script src="assets/js/lightbox.min.js">
+</script>
+<script type="text/javascript">
+        $(function() {
+          // Javascript to enable link to tab
+          var hash = document.location.hash;
+          if (hash) {
+            console.log(hash);
+            $('.nav-tabs a[href='+hash+']').tab('show');
+          }
+
+          // Change hash for page-reload
+          $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+            window.location.hash = e.target.hash;
+          });
+        });
+    </script>
 </html>

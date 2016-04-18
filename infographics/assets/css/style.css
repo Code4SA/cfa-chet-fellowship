@@ -35,6 +35,23 @@
 
 .nav {
    margin-bottom: 20px;
+   background-color: #000;
+}
+
+.nav-tabs > li > a {
+   border-radius: 0 0 0 0;
+}
+
+a {
+   color: #FFF;
+}
+
+a:hover {
+   color: #000;
+}
+
+.tab-pane {
+   margin-top: 60px;
 }
 
 hr {
