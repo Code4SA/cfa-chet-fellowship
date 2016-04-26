@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>African Higher Education</title>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/exportexcel.js"></script>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/lightbox.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  </head>
+
+<body style="width: 960px;">
+
+<ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
+<li><a href="south-african-post-school-system.html">South African Post-School System</a></li>
+<li><a href="doctoral-education.html">Doctoral Education</a></li>
+<li><a href="knowledge-production.html">Knowledge Production</a></li>
+<li><a href="finances-and-fees.html">Finances and Fees</a></li>
+<li><a href="differentiation.html">Differentiation</a></li>
+<li class="active"><a href="african-higher-education.html">African Higher Education</a></li>
+</ul>
+
+    <div class="container-fluid">
+      <div class="row" style="margin-top:60px;">
+        <div id="cards">
+
+        </div>
+      </div>
+    </div>
+
+    <script id="card-template" type="text/x-handlebars-template">
+
+    <div class="row">
+
+<div class="col-sm-6 vcenter">
+<a href="{{image}}" data-lightbox="{{id}}-lightbox"><img src="{{thumbnail}}" width=100%></a>
+</div><!--    
+--><div class="col-sm-6 vcenter">
+<div class="well">
+        <h4>{{title}}</h4>
+        <p>Data source: {{data-source}}</p>
+        <p>Compiled by: {{compiled-by}}</p>
+        <p>Designed by: {{designed-by}}</p>
+        <p>Date: {{date}}</p>
+        <p>License: {{license}}</p>
+	<p>
+	<div class="btn-group" role="group">
+	<a class="btn btn-default" data-toggle="collapse" href="#{{id}}-data">Data table <i class="fa fa-caret-down"></i></a>
+	<a class="btn btn-default" data-toggle="collapse" href="#{{id}}-description">Description <i class="fa fa-caret-down"></i></a>
+	</div>
+	</p>
+</div>
+</div>
+
+	</div>
+
+	<div class="row">
+
+<div class="panel-group">
+<div class="panel panel-default panel-table">
+
+<div id="{{id}}-description" class="panel-collapse collapse" >
+<div class="panel-body" >
+<blockquote>
+  <p>{{description}}</p>
+</blockquote>
+</div>
+</div>
+
+<div id="{{id}}-data" class="panel-collapse collapse">
+<div class="panel-body">
+
+<p>
+<table id="{{id}}-table" class="table .table-responsive table-hover">
+{{{table}}}
+<a id="dlink"  style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
+<p>
+
+</div>
+</div>
+
+</div>
+</div>
+
+	</div>
+
+<hr>
+    </script>
+  </body>
+
+ <script>pageType = "African Higher Education";</script>
+
+ <script src="assets/js/cfamerica-lib.js"></script>
+ <script src="assets/js/populate.js"></script>
+ <script src="assets/js/lightbox.min.js"></script>
+</html>

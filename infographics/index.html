@@ -9,13 +9,11 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/exportexcel.js"></script>
-<script src="assets/js/tablink.js"></script>
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
-
 <body style="width: 960px;">
 
 <ul class="nav nav-tabs navbar-fixed-top navbar-inverse" id="menu">
@@ -138,23 +136,23 @@
 	<div class="row">
 
 <div class="col-sm-6">
-<a href="images/doctoral-education/54a.png" data-lightbox="docgradnumbers"><img src="images/doctoral-education/54a.jpg" width=100%></a>
+<a href="images/doctoral-education/54a.png" data-lightbox="number-of-doctoral-graduates-lightbox"><img src="images/doctoral-education/54a.jpg" width="100%"></a>
 </div>
 
 <div class="col-sm-5 col-sm-offset-1">
 <div class="well">
         <h4>Number of doctoral graduates</h4>
-        <p><i class="fa fa-book fa-fw"></i> Doctoral Education in South Africa, page 54</p>
+        <p>Data source: something</p>
+        <p>Compiled by: like</p>
+        <p>Designed by: this</p>
+        <p>Date: anything</p>
+        <p>License: really</p>
 	<p>
-	<div class="btn-group" role="group">
-	  <a class="btn btn-default" data-toggle="collapse" href="#docgradnumbers">Table <i class="fa fa-caret-down"></i></a>
-	  <a class="btn btn-default" data-toggle="collapse" href="#docgradnumbers-context">Context <i class="fa fa-caret-down"></i></a>
-	  <a href="http://www.chet.org.za/download/file/fid/915" target="_blank" type="button" class="btn btn-default"><i class="fa fa-download"></i> Chapter</a>
-	  <a href="http://www.chet.org.za/download/file/fid/909" target="_blank" type="button" class="btn btn-default"><i class="fa fa-download"></i> Book</a>
+	</p><div class="btn-group" role="group">
+	<a class="btn btn-default" data-toggle="collapse" href="#number-of-doctoral-graduates-data">Data table <i class="fa fa-caret-down"></i></a>
+	<a class="btn btn-default" data-toggle="collapse" href="#number-of-doctoral-graduates-description">Description <i class="fa fa-caret-down"></i></a>
 	</div>
-	</p>
-        <p><i class="fa fa-user fa-fw"></i> Creator</p>
-        <p><i class="fa fa-calendar-o fa-fw"></i> Date</p>
+	<p></p>
 </div>
 </div>
 
@@ -163,50 +161,34 @@
 	<div class="row">
 
 <div class="panel-group">
-<div class="panel panel-default panel-table">
+<div class="panel panel-default">
 
-<div id="docgradnumbers-context" class="panel-collapse collapse">
+<div id="number-of-doctoral-graduates-description" class="panel-collapse collapse">
 <div class="panel-body">
 <blockquote>
-  <p>If the factors of population size and GDP ranking are combined, Korea
-(50 million, 15 GDP), Italy (60 million, 9 GDP) and Turkey (74 million, 17
-GDP) are closest to South Africa (51 million, 28 GDP) (World Bank 2012).
-In terms of total number of PhD graduates, Turkey (4 653) outperformed
-South Africa (1 576) by three times, and Korea (11 645) and Italy (11 270) each
-produced seven times more graduates than South Africa. The same applies
-to the proportion of doctorates in science, engineering and technology.</p>
+  <p>"If the factors of population size and GDP ranking are combined, Korea (50 million, 15 GDP), Italy (60 million, 9 GDP) and Turkey (74 million, 17 GDP) are closest to South Africa (51 million, 28 GDP) (World Bank 2012). In terms of total number of PhD graduates, Turkey (4 653) outperformed South Africa (1 576) by three times, and Korea (11 645) and Italy (11 270) each produced seven times more graduates than South Africa. The same applies to the proportion of doctorates in science, engineering and technology."</p>
 </blockquote>
 </div>
 </div>
 
-<div id="docgradnumbers" class="panel-collapse collapse">
+<div id="number-of-doctoral-graduates-data" class="panel-collapse collapse">
 <div class="panel-body">
 
 <p>
-<table id="docgradnumbers-table" class="table .table-responsive table-hover">
-<thead><th>Total</th><th>2000</th><th>2011</th></tr></thead><tbody>
- <tr><td>South Africa</td><td>971</td><td>1576</td></tr>
- <tr><td>Italy</td><td>3557</td><td>11270</td></tr>
- <tr><td>Korea</td><td>4335</td><td>11645</td></tr>
-<thead><th>Set</th><th> </th><th> </th></tr></thead><tbody>
- <tr><td>South Africa</td><td>400</td><td>854</td></tr>
- <tr><td>Italy</td><td>2415</td><td>7190</td></tr>
- <tr><td>Korea</td><td>4335</td><td>6954</td></tr>
-</tbody></table>
-<a id="dlink"  style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('docgradnumbers-table', 'Number of doctoral graduates.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download table</a>
+</p><table id="number-of-doctoral-graduates-table" class="table .table-responsive table-hover">
+<thead><tr><th>Total</th><th>2000</th><th>2011</th></tr></thead><tbody><tr><td>South Africa</td><td>971</td><td>1576</td></tr><tr><td>Italy</td><td>3557</td><td>11270</td></tr><tr><td>Korea</td><td>4335</td><td>11645</td></tr></tbody><thead><tr><th>Set</th><th> </th><th></th></tr></thead><tbody><tr><td>South Africa</td><td>400</td><td>854</td></tr><tr><td>Italy</td><td>2415</td><td>7190</td></tr><tr><td>Korea</td><td>4335</td><td>6954</td></tr></tbody></table>
+<a id="dlink" style="display:none;"></a><a class="btn btn-default" onclick="tableToExcel('number-of-doctoral-graduates-table', 'Number of doctoral graduates.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
 <p>
 
-</div>
-</div>
-
-</div>
+</p></div>
 </div>
 
+</div>
+</div>
 
 	</div>
 
 <hr>
-
 	<div class="row">
 
 <div class="col-sm-6">
@@ -538,44 +520,17 @@ to the proportion of doctorates in science, engineering and technology.</p>
 
 			<div class="tab-pane" id="knowledgeproduction">
 <!-- graphic start -->
-	<div class="row">
+    <a class="btn btn-default" data-toggle="collapse" href="#learn-more">Learn a bit more <i class="fa fa-caret-down"></i></a>
 
-<div class="col-sm-6">
-<a href="images/knowledge-production/figures.png" data-lightbox="image"><img src="images/knowledge-production/figures-small.png" width=100%></a>
-</div>
+<div class="panel panel-default">
 
-<div class="col-sm-5 col-sm-offset-1">
-<div class="well">
-        <h4>Title</h4>
-        <p><i class="fa fa-table fa-fw"></i> Source</p>
-        <p><i class="fa fa-user fa-fw"></i> Creator</p>
-        <p><i class="fa fa-calendar-o fa-fw"></i> Date</p>
-        <p><a class="btn btn-primary" data-toggle="collapse" href="#title">Table <i class="fa fa-caret-down"></i></a></p>
-</div>
-</div>
-
-	</div>
-
-	<div class="row">
-
-<div class="panel-group">
-<div class="panel panel-default panel-table">
-<div id="title" class="panel-collapse collapse">
+<div id="learn-more" class="panel-collapse collapse">
 <div class="panel-body">
-
-<p>
-<table class="table .table-responsive table-hover">
-<!-- insert table -->
-</table>
-<p>
-
-</div>
-</div>
+  <p>If the factors of population size and GDP ranking are combined, Korea (50 million, 15 GDP), Italy (60 million, 9 GDP) and Turkey (74 million, 17 GDP) are closest to South Africa (51 million, 28 GDP) (World Bank 2012). In terms of total number of PhD graduates, Turkey (4 653) outperformed South Africa (1 576) by three times, and Korea (11 645) and Italy (11 270) each produced seven times more graduates than South Africa. The same applies to the proportion of doctorates in science, engineering and technology.</p>
 </div>
 </div>
 
-	</div>
-
+</div>
 			</div>
 
 <!-- tab border -->
