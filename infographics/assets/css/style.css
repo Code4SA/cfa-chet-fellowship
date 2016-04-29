@@ -1,3 +1,19 @@
+body {
+   font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif;
+   color: #666;
+   font-size: 12px
+}
+
+h1 {
+	color: #DA4622;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+
 .row {
    margin-right:0;
    margin-left:0;
@@ -11,46 +27,27 @@
    border: 0;
 }
 
-.panel-heading {
-   border-bottom-width: 0;
-   border-radius: 0px;
-   background-color: #333332;
-   border-color: #333332;
-}
-
 .panel-title {
    color: #FFF;
 }
 
 .well {
-   margin-top: 20px;
+   margin-top: 0;
    margin-bottom: 0;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: rgba(245, 245, 245, 0.3);
+   position: relative;
 }
 
-.panel-default > .panel-heading {
-   color: #FFF;
-   background-color: #333332;
-   border-color: #333332;
 }
 
 .nav {
    margin-bottom: 20px;
-   background-color: #000;
+   background-color: #333332;
 }
 
-.nav-tabs > li > a {
-   border-radius: 0 0 0 0;
-}
-
-a {
-   color: #FFF;
-}
-
-a:hover {
-   color: #000;
-}
-
-.tab-pane {
+.cards {
    margin-top: 60px;
 }
 
@@ -61,4 +58,117 @@ hr {
 blockquote {
    padding-bottom: 0px;
    font-size: inherit;
+}
+
+.graphic-entry {
+	border: 1px solid;
+	border-color: #e3e3e3;
+	vertical-align: middle;
+
+}
+
+.graphic-image {
+	padding-left: 0;
+}
+
+.graphic-data {
+	padding-right: 0;
+	margin-top: 10px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+
+.nav-pills > li > a {
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 0px;
+	text-decoration: none;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #fff;
+	color: black;
+}
+
+.nav-pills > li > a:hover {
+	background-color: #DA4622;
+	color: #fff;
+}
+
+.nav-pills > li > a {
+	color: #fff;
+}
+
+.btn, .btn:focus {
+	background: #999;
+	color: #fff;
+	border: 0px solid transparent;
+	font-size: 12px;
+	padding: 6px 6px 6px 6px;
+}
+
+.btn:hover {
+	background: #DA4622;
+	color: #fff;
+}
+
+.btn:active, .btn:active:focus, .btn.active {
+	background: #DA4622;
+	color: #fff;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #DA4622;
+	text-decoration: none;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -42px;
+    visibility: hidden;
+}
+
+a.btn {
+	text-decoration: none;
+}
+
+.share, .share:hover, .share:active, .share:focus {
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 3px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+	border-radius: inherit;
+}
+
+.share-buttons {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.share-left {
+	margin-right: -3px;
+	border-radius: 0 0 0 4px;
+}
+
+.share-middle {
+	border-radius: 0;
+}
+
+.share-right {
+	margin-left: -3px;
+	border-radius: 0 4px 0 0;
 }

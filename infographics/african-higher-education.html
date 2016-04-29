@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>African Higher Education</title>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/exportexcel.js"></script>
+<script src="assets/js/clipboard.min.js"></script>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/lightbox.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<!-- tooltip -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+  </head>
+
+<body style="width: 960px;">
+
+<!-- copy to clipboard -->
+<script>
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
+
+<ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
+<li class="active"><a href="african-higher-education.html">African Higher Education</a></li>
+<li><a href="differentiation.html">Differentiation</a></li>
+<li><a href="doctoral-education.html">Doctoral Education</a></li>
+<li><a href="finances-and-fees.html">Finances and Fees</a></li>
+<li><a href="knowledge-production.html">Knowledge Production</a></li>
+<li><a href="south-african-post-school-system.html">South African Post-School System</a></li>
+</ul>
+
+    <div class="container-fluid">
+      <div class="row" style="margin-top:60px;">
+        <div id="cards">
+
+        </div>
+      </div>
+    </div>
+
+    <script id="card-template" type="text/x-handlebars-template">
+
+    <div class="row"><a class="anchor" id="{{id}}"</a>
+
+<div class="col-xs-6 vcenter">
+<a href="{{image-url}}" data-lightbox="{{id}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
+</div><!--    
+--><div class="col-xs-6 vcenter">
+<div class="well">
+
+<h4>
+  {{title}}
+</h4>
+<div class="share-buttons">
+  <a data-container="body" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html#{{id}}" href="#{{id}}" type="button" class="btn btn-default share share-left" data-toggle="tooltip" title="Copy link" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+
+  <a data-container="body" href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
+
+  <a data-container="body" href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
+</div>
+
+
+  <table class="table table-condensed" style="margin-bottom: 0px;">
+    <tbody>
+      <tr>
+        {{#if data-source}}
+        <td class="col-xs-3" style="border-top-width: 0px;">Data source</td>
+        {{/if}}
+        {{#if data-source-url}}
+        <td class="source" style="border-top-width: 0px;"><a href="{{{data-source-url}}}" target="_blank">{{data-source}}</a></td>
+        {{else}}
+        <td style="border-top-width: 0px;">{{data-source}}</td>
+        {{/if}}
+      </tr>
+      {{#if compiled-by}}
+      <tr>
+        <td class="col-xs-3">Compiled by</td>
+        <td>{{compiled-by}}</td>
+      </tr>
+      {{/if}}
+      {{#if designed-by}}
+      <tr>
+        <td class="col-xs-3">Designed by</td>
+        <td>{{designed-by}}</td>  
+      </tr>
+      {{/if}}
+      {{#if date}}
+      <tr>
+        <td class="col-xs-3">Date</td>
+        <td>{{date}}</td>
+      </tr>
+      {{/if}}
+      {{#if license}}      
+      <tr>
+        <td class="col-xs-3">License</td>
+        <td>{{license}}</td>
+      </tr>
+      {{/if}}      
+    </tbody>
+  </table>
+  {{#if description-or-table}} 
+  <p style="margin-top: 10px; margin-bottom: 5px">
+  {{#if table}}
+  <a class="btn" data-toggle="collapse" href="#{{id}}-data">Data table <i class="fa fa-caret-down"></i></a>
+  {{/if}}
+  {{#if description}}
+  <a class="btn" data-toggle="collapse" href="#{{id}}-description">Description <i class="fa fa-caret-down"></i></a>
+  </div>
+  {{/if}}
+  </p>
+  {{/if}}
+</div>
+
+  </div>
+
+{{#if description-or-table}} 
+
+  <div class="row">
+
+<div class="panel-group">
+<div class="panel panel-default panel-table">
+
+{{#if description}}
+<div id="{{id}}-description" class="panel-collapse collapse" >
+<div class="panel-body" >
+<blockquote>
+  <p>{{description}}</p>
+</blockquote>
+</div>
+</div>
+{{/if}}
+
+<div id="{{id}}-data" class="panel-collapse collapse">
+<div class="panel-body">
+
+{{#if table}}
+<p>
+<table id="{{id}}-table" class="table .table-responsive table-hover">
+{{{table}}}
+<a id="dlink"  style="display:none;"></a><a class="btn" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
+<p>
+{{/if}}
+
+</div>
+</div>
+
+</div>
+</div>
+
+  </div>
+{{/if}}
+
+{{#if description-or-table}} 
+<hr>
+{{else}}
+<hr style="margin-top: 20px">
+{{/if}}
+
+    </script>
+  </body>
+
+ <script>pageType = "African Higher Education";</script>
+
+ <script src="assets/js/cfamerica-lib.js"></script>
+ <script src="assets/js/populate.js"></script>
+ <script src="assets/js/lightbox.min.js"></script>
+</html>
