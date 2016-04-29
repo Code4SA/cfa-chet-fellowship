@@ -1,10 +1,17 @@
 body {
    font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif;
-   color: #666666;
+   color: #666;
+   font-size: 12px
+}
+
+h1 {
+	color: #DA4622;
 }
 
 h4 {
     font-size: 16px;
+    font-weight: bold;
+    color: #666;
 }
 
 .row {
@@ -29,16 +36,15 @@ h4 {
    margin-bottom: 0;
    padding-top: 10px;
    padding-bottom: 10px;
-   background-color: hsla(0,0%,96%,0.3);
+   background-color: rgba(245, 245, 245, 0.3);
+   position: relative;
+}
+
 }
 
 .nav {
    margin-bottom: 20px;
    background-color: #333332;
-}
-
-.nav-tabs > li > a {
-   border-radius: 0 0 0 0;
 }
 
 .cards {
@@ -80,6 +86,7 @@ blockquote {
 	padding-left: 8px;
 	padding-right: 8px;
 	border-radius: 0px;
+	text-decoration: none;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -100,6 +107,8 @@ blockquote {
 	background: #999;
 	color: #fff;
 	border: 0px solid transparent;
+	font-size: 12px;
+	padding: 6px 6px 6px 6px;
 }
 
 .btn:hover {
@@ -112,12 +121,54 @@ blockquote {
 	color: #fff;
 }
 
-.source > a {
+a {
 	color: inherit;
 	text-decoration: underline;
 }
 
-.source > a:hover {
+a:hover{
 	color: #DA4622;
 	text-decoration: none;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -42px;
+    visibility: hidden;
+}
+
+a.btn {
+	text-decoration: none;
+}
+
+.share, .share:hover, .share:active, .share:focus {
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 3px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+	border-radius: inherit;
+}
+
+.share-buttons {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.share-left {
+	margin-right: -3px;
+	border-radius: 0 0 0 4px;
+}
+
+.share-middle {
+	border-radius: 0;
+}
+
+.share-right {
+	margin-left: -3px;
+	border-radius: 0 4px 0 0;
 }
