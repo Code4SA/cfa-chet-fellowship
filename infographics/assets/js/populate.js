@@ -1,5 +1,5 @@
 function showInfo(e, t) {
-    allRows = _.sortBy(t.sheets("output").all(), "order"),
+    allRows = _.sortBy(t.sheets("input").all(), "order"),
     filterByDatatype(pageType)
 }
 function filterByDatatype(e) {
