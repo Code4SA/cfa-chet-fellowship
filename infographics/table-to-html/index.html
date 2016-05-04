@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tableizer"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script type="text/javascript" src="js/beautify-html.js"></script>
+    <title>Table to HTML</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="template/bootstrap.css" rel="stylesheet">
+
+<style>
+  h3 {
+    text-align: center;
+  }
+</style>
+  </head>
+
+  <body>
+
+    <div class="container" ng-controller="TextAreaController">
+
+      <div class="starter-template">
+        <h3>Paste table</h3>
+      </div>
+      
+      <div class="row">
+        <textarea ng-model="textarea.text" class="col-xs-12" rows="10"></textarea>
+        
+
+      </div>
+
+      <!-- Table viewer -->
+      <div class="starter-template">
+        <h3>Table viewer</h3>
+        <div id="table-container" class="col-xs-12"></div>
+      </div>
+
+      <!-- Table html viewer -->
+      <div class="starter-template">
+        <h3 class="col-xs-12">Table in HTML</h3> 
+      </div>
+                <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="options.headers">Enable table header
+            </label>
+          </div> 
+        <div class="row">
+        <textarea id="source" class="col-xs-12" rows="10" > </textarea>
+      </div>
+      
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap and angular core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="js/textAreaController.js"></script>
+    <script src="template/jquery.js"></script>
+    <script src="template/bootstrap.js"></script>
+</body></html>

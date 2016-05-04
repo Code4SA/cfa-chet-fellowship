@@ -145,6 +145,11 @@ $(document).ready(function(){
 <div class="panel-body" >
 <blockquote>
   <p>{{description}}</p>
+      {{#if data-source-url}}
+  <p>Source: <a href="{{{data-source-url}}}" target="_blank">{{data-source}}</a></p>
+        {{else}}
+  <p>Source: {{data-source}}</p>
+        {{/if}}
 </blockquote>
 </div>
 </div>
@@ -155,7 +160,7 @@ $(document).ready(function(){
 
 {{#if table}}
 <p>
-<table id="{{id}}-table" class="table .table-responsive table-hover">
+<table id="{{id}}-table" class="table table-hover">
 {{{table}}}
 <a id="dlink"  style="display:none;"></a><a class="btn" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
 <p>
