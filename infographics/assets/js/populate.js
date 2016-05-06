@@ -38,3 +38,9 @@ $(document).ready(function() {
 });
 var allRows = [];
 
+$("#menu a").click(function(e){
+    $("#menu li").removeClass('active')
+    $(this).closest('li').addClass('active')
+    var link = $(this).text();
+    filterByDatatype(link);
+});
