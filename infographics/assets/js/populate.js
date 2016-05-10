@@ -7,7 +7,7 @@ function filterByDatatype(e) {
     updateCards(allRows, [buildDatatypeFilter(e)])
 }
 function clearCards() {
-    $("#cards").empty()
+    $("#graphics").empty()
 }
 function buildDatatypeFilter(e) {
     return e ? function(t) {
@@ -17,7 +17,7 @@ function buildDatatypeFilter(e) {
 }
 function updateCards(e, t) {
     var t = t || []
-      , a = $("#card-template").html()
+      , a = $("#graphics-overview").html()
       , n = Handlebars.compile(a);
     _.chain(e).filter(function(e) {
         return _.all(t, function(t) {
@@ -25,7 +25,7 @@ function updateCards(e, t) {
         })
     }).map(function(e) {
         var t = n(e);
-        $("#cards").append(t),
+        $("#graphics").append(t),
         $('[data-toggle="tooltip"]').tooltip()
     })
 }
@@ -34,13 +34,24 @@ $(document).ready(function() {
         key: "1TU-qiEpZAkLMXvPE8v5HPaPJhEqyYPSrwZ513LIA3h8",
         callback: showInfo,
         parseNumbers: !0
-    })
-});
-var allRows = [];
+    });
+    var allRows = [];
 
-$("#menu a").click(function(e){
-    $("#menu li").removeClass('active')
-    $(this).closest('li').addClass('active')
-    var link = $(this).text();
-    filterByDatatype(link);
+    $("#menu a").click(function(e){
+        $("#menu li").removeClass('active')
+        $(this).closest('li').addClass('active')
+        var link = $(this).text();
+        filterByDatatype(link);
+    });
+
+    $("body").on("click", "a.copy", function() {
+        $("a.copy").attr('title', 'Copy URL').tooltip('fixTitle');
+        $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');
+    });
+
+    var tabSwitch = "#"+location.hash.substring(location.hash.lastIndexOf("#")+1,location.hash.lastIndexOf("|"));
+    $(tabSwitch).click();
+
+    var toAnchor = "#"+location.hash.split('|')[1]
+    
 });

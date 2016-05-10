@@ -6,28 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
 
-<!-- Switch when ready
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script> -->
-<script src="assets/js/jquery.min.js"></script>
-
-<!-- Switch when ready
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  -->
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script src="assets/js/exportexcel.js"></script>
-<script src="assets/js/clipboard.min.js"></script>
-
-<!-- Switch when ready
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
-<link rel="stylesheet" href="assets/css/bootstrap.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="assets/js/populate.js"></script>
 
 <!-- tooltip -->
 <script>
@@ -35,9 +23,17 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 });
 </script>
+
+<script src="assets/js/clipboard.min.js"></script>
   </head>
 
 <body style="width: 960px;">
+
+<noscript>
+  <div style="margin-top:60px;">
+    <p>This page requires JavaScript</p>
+  </div>
+</noscript>
 
 <!-- copy to clipboard -->
 <script>
@@ -51,23 +47,23 @@ $(document).ready(function(){
 </script>
 
 <ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
-<li class="active"><a href="#">African Higher Education</a></li>
-<li><a href="#">Differentiation</a></li>
-<li><a href="#">Doctoral Education</a></li>
-<li><a href="#">Finances and Fees</a></li>
-<li><a href="#">Knowledge Production</a></li>
-<li><a href="#">South African Post-School System</a></li>
+<li class="active"><a id="african-higher-education"  href="#">African Higher Education</a></li>
+<li><a id="differentiation" href="#">Differentiation</a></li>
+<li><a id="doctoral-education" href="#" id="phd-production-comparison">Doctoral Education</a></li>
+<li><a id="finances-and-fees" href="#">Finances and Fees</a></li>
+<li><a id="knowledge-production" href="#">Knowledge Production</a></li>
+<li><a id="south-african-post-school-system" href="#">South African Post-School System</a></li>
 </ul>
 
     <div class="container-fluid">
       <div class="row" style="margin-top:60px;">
-        <div id="cards">
+        <div id="graphics">
 
         </div>
       </div>
     </div>
 
-    <script id="card-template" type="text/x-handlebars-template">
+    <script id="graphics-overview" type="text/x-handlebars-template">
 
     <div class="row"><a class="anchor" id="{{id}}"</a>
 
@@ -80,13 +76,12 @@ $(document).ready(function(){
   {{title}}
 </h4>
 <div class="share-buttons">
-  <a data-container="body" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html#{{id}}" href="#{{id}}" type="button" class="btn btn-default share share-left" data-toggle="tooltip" title="Copy link" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+  <a title="Copy URL" data-clipboard-text="localhost/code4sa/cfa-chet-fellowship/infographics/#{{category-id}}|{{id}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
-  <a data-container="body" href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 
-  <a data-container="body" href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
+  <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
 </div>
-
 
   <table class="table table-condensed" style="margin-bottom: 0px;">
     <tbody>
@@ -170,7 +165,7 @@ $(document).ready(function(){
 <p>
 <table id="{{id}}-table" class="table table-hover">
 {{{table}}}
-<a id="dlink"  style="display:none;"></a><a class="btn" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
+<a id="dlink" style="display:none;"></a><a class="btn" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
 <p>
 {{/if}}
 
@@ -192,9 +187,10 @@ $(document).ready(function(){
     </script>
   </body>
 
- <script>pageType = "African Higher Education";</script>
-
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <script src="assets/js/exportexcel.js"></script>
  <script src="assets/js/cfamerica-lib.min.js"></script>
- <script src="assets/js/populate.js"></script>
  <script src="assets/js/lightbox.min.js"></script>
+
+ <script>pageType = "African Higher Education";</script>
 </html>
