@@ -17,10 +17,10 @@
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="assets/js/populate.js"></script>
 
-<!-- tooltip -->
 <script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
+
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 });
 </script>
 
@@ -37,13 +37,14 @@ $(document).ready(function(){
 
 <!-- copy to clipboard -->
 <script>
-    var clipboard = new Clipboard('.btn');
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
+
+var clipboard = new Clipboard('.btn');
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+clipboard.on('error', function(e) {
+    console.log(e);
+});
 </script>
 
 <ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
@@ -64,6 +65,7 @@ $(document).ready(function(){
     </div>
 
     <script id="graphics-overview" type="text/x-handlebars-template">
+
 
     <div class="row"><a class="anchor" id="{{id}}"</a>
 
@@ -185,12 +187,14 @@ $(document).ready(function(){
 {{/if}}
 
     </script>
-  </body>
-
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <script src="assets/js/exportexcel.js"></script>
  <script src="assets/js/cfamerica-lib.min.js"></script>
  <script src="assets/js/lightbox.min.js"></script>
 
- <script>pageType = "African Higher Education";</script>
+ <script>
+pageType = "African Higher Education";
+</script>
+  </body>
+
 </html>
