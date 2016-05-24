@@ -48,7 +48,7 @@ clipboard.on('error', function(e) {
 </script>
 
 <ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
-<li class="active"><a id="african-higher-education"  href="#">African Higher Education</a></li>
+<li><a id="african-higher-education"  href="#">African Higher Education</a></li>
 <li><a id="differentiation" href="#">Differentiation</a></li>
 <li><a id="doctoral-education" href="#" id="phd-production-comparison">Doctoral Education</a></li>
 <li><a id="finances-and-fees" href="#">Finances and Fees</a></li>
@@ -67,7 +67,7 @@ clipboard.on('error', function(e) {
     <script id="graphics-overview" type="text/x-handlebars-template">
 
 
-    <div class="row"><a class="anchor" id="{{id}}"</a>
+    <div class="row"><a class="anchor" id="{{category-id}}-{{id}}"</a>
 
 <div class="col-xs-6 vcenter">
 <a href="{{image-url}}" data-lightbox="{{id}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
@@ -78,7 +78,7 @@ clipboard.on('error', function(e) {
   {{title}}
 </h4>
 <div class="share-buttons">
-  <a title="Copy URL" data-clipboard-text="localhost/code4sa/cfa-chet-fellowship/infographics/#{{category-id}}|{{id}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+  <a title="Copy URL" data-clipboard-text="localhost/code4sa/cfa-chet-fellowship/infographics/#{{category-id}}-{{id}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 
@@ -191,10 +191,6 @@ clipboard.on('error', function(e) {
  <script src="assets/js/exportexcel.js"></script>
  <script src="assets/js/cfamerica-lib.min.js"></script>
  <script src="assets/js/lightbox.min.js"></script>
-
- <script>
-pageType = "African Higher Education";
-</script>
   </body>
 
 </html>

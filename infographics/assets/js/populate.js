@@ -1,7 +1,22 @@
 function showInfo(e, t) {
+    if(window.location.hash) {
+    var switchTab = location.hash.substring(location.hash.lastIndexOf("#")+1,location.hash.lastIndexOf("-"));
+    pageType = switchTab;
+
+    var tabButton = "#"+switchTab;
+    $(tabButton).click();
+
+} else {
+    pageType = 'african-higher-education';
+    $("#african-higher-education").click();
+}
+ 
     allRows = _.sortBy(t.sheets("input").all(), "order"),
     filterByDatatype(pageType)
 }
+
+var allRows = [];
+
 function filterByDatatype(e) {
     clearCards(),
     updateCards(allRows, [buildDatatypeFilter(e)])
@@ -49,9 +64,4 @@ $(document).ready(function() {
         $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');
     });
 
-    var tabSwitch = "#"+location.hash.substring(location.hash.lastIndexOf("#")+1,location.hash.lastIndexOf("|"));
-    $(tabSwitch).click();
-
-    var toAnchor = "#"+location.hash.split('|')[1]
-    
 });
