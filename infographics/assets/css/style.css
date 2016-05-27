@@ -93,15 +93,18 @@ blockquote {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 	background-color: #fff;
 	color: black;
+	outline: none;	
 }
 
 .nav-pills > li > a:hover {
 	background-color: #DA4622;
 	color: #fff;
+	outline: none;
 }
 
 .nav-pills > li > a {
 	color: #fff;
+	outline: none;
 }
 
 .btn, .btn:focus {
@@ -110,26 +113,35 @@ blockquote {
 	border: 0px solid transparent;
 	font-size: 12px;
 	padding: 6px 6px 6px 6px;
+	outline: none;
 }
 
 .btn:hover {
 	background: #DA4622;
 	color: #fff;
+	outline: none;
 }
 
 .btn:active, .btn:active:focus, .btn.active {
 	background: #DA4622;
 	color: #fff;
+	outline: none;
 }
 
 a {
 	color: inherit;
 	text-decoration: underline;
+	outline: none;
+}
+
+a:active {
+	outline: none;	
 }
 
 a:hover{
 	color: #DA4622;
 	text-decoration: none;
+	outline: none;
 }
 
 a.anchor {
@@ -137,10 +149,12 @@ a.anchor {
     position: relative;
     top: -42px;
     visibility: hidden;
+    outline: none;
 }
 
 a.btn {
 	text-decoration: none;
+	outline: none;
 }
 
 .share, .share:hover, .share:active, .share:focus {
@@ -148,6 +162,7 @@ a.btn {
 	padding-right: 6px;
 	padding-top: 4px;
 	padding-bottom: 4px;
+	outline: none;
 }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
@@ -158,6 +173,7 @@ a.btn {
 	position: absolute;
 	right: 0px;
 	top: 0px;
+	outline: none;
 }
 
 .share-left {

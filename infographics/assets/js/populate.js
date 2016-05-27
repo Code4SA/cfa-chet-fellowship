@@ -7,7 +7,7 @@ function showInfo(e, t) {
     $(tabButton).click();
 
 } else {
-    pageType = 'african-higher-education';
+    pageType = 'African Higher Education';
     $("#african-higher-education").click();
 }
  
