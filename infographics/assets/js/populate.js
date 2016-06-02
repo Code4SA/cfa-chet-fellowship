@@ -7,7 +7,7 @@ function showInfo(e, t) {
     $(tabButton).click();
 
 } else {
-    pageType = 'African Higher Education';
+    pageType = 'african-higher-education';
     $("#african-higher-education").click();
 }
  
@@ -55,7 +55,7 @@ $(document).ready(function() {
     $("#menu a").click(function(e){
         $("#menu li").removeClass('active')
         $(this).closest('li').addClass('active')
-        var link = $(this).text();
+        var link = $(this).attr('id');
         filterByDatatype(link);
     });
 
