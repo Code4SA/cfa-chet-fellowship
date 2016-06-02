@@ -43,6 +43,10 @@ function updateCards(e, t) {
         $("#graphics").append(t),
         $('[data-toggle="tooltip"]').tooltip()
     })
+    if(window.location.hash) {
+        window.location.hash = window.location.hash;
+    }
+
 }
 $(document).ready(function() {
     Tabletop.init({
