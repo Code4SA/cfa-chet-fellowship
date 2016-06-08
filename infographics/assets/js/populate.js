@@ -1,6 +1,6 @@
 function showInfo(e, t) {
-    if (window.top.location.hash) {
-        var switchTab = window.top.location.hash.substring(window.top.location.hash.lastIndexOf("#") + 1, window.top.location.hash.lastIndexOf("-"));
+    if (window.location.hash) {
+        var switchTab = location.hash.substring(location.hash.lastIndexOf("#") + 1, location.hash.lastIndexOf("-"));
         pageType = switchTab;
         
         var tabButton = "#" + switchTab;
@@ -46,8 +46,8 @@ function updateCards(e, t) {
         $("#graphics").append(t),
         $('[data-toggle="tooltip"]').tooltip()
     })
-    if (window.top.location.hash) {
-        window.top.location.hash = window.top.location.hash;
+    if (window.location.hash) {
+        window.location.hash = window.location.hash;
     }
 
 }
