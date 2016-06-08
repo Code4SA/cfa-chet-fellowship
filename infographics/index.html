@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
 
-<body style="width: 960px;">
+<body>
 
 <noscript>
   <div style="margin-top:60px;">
@@ -54,7 +54,7 @@ clipboard.on('error', function(e) {
 });
 </script>
 
-<ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu" style="width: 960px;">
+<ul class="nav nav-pills navbar-fixed-top navbar-inverse" id="menu">
 <li><a id="african-higher-education" href="#">African Higher Education</a></li>
 <li><a id="differentiation" href="#">Differentiation</a></li>
 <li><a id="doctoral-education" href="#">Doctoral Education</a></li>
@@ -76,20 +76,28 @@ clipboard.on('error', function(e) {
 
     <div class="row"><a class="anchor" id="{{category-id}}-{{clean title}}"</a>
 
-<div class="col-xs-6 vcenter">
+<div class="col-xs-12 col-sm-6 vcenter">
 <a href="{{image-url}}" data-lightbox="{{clean title}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
 </div><!--    
---><div class="col-xs-6 vcenter">
+--><div class="col-xs-12 col-sm-6 vcenter">
 <div class="well">
 <h4>
   {{title}}
 </h4>
-<div class="share-buttons">
+<div class="share-buttons hidden-xs">
   <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 
   <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
+</div>
+
+<div class="share-buttons-small hidden-sm hidden-md hidden-lg">
+  <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left-small copy" data-toggle="tooltip" data-placement="top"><i class="fa fa-link fa-fw"></i></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-middle-small" data-toggle="tooltip" title="Share on Facebook" data-placement="top"><i class="fa fa-facebook fa-fw"></i></a>
+
+  <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-right-small" data-toggle="tooltip" title="Share on Twitter" data-placement="top"><i class="fa fa-twitter fa-fw"></i></a>
 </div>
 
   <table class="table table-condensed" style="margin-bottom: 0px;">

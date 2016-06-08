@@ -12,7 +12,16 @@ h4 {
     font-size: 16px;
     font-weight: bold;
     color: #666;
-    width: 320px;
+    width: calc(100% - 85px);
+}
+
+@media (max-width: 768px) {
+	h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    width: auto;
+	}
 }
 
 .row {
@@ -157,8 +166,8 @@ a.anchor {
 a.btn {
 	text-decoration: none;
 	outline: none;
-}
 
+}
 .share, .share:hover, .share:active, .share:focus {
 	padding-left: 6px;
 	padding-right: 6px;
@@ -201,4 +210,25 @@ a.btn {
 	border-bottom: 0px solid #ddd;
 	border-top: 0px solid #ddd;
 	color: #DA4622;
+}
+
+.share-buttons-small {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	outline: none;
+}
+
+.share-left-small {
+	margin-right: -2px;
+	border-radius: 4px 0 0 0;
+}
+
+.share-middle-small {
+	border-radius: 0;
+}
+
+.share-right-small {
+	margin-left: -2px;
+	border-radius: 0 0 4px 0;
 }
