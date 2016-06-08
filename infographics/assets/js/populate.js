@@ -72,3 +72,11 @@ $(document).ready(function() {
     });
 
 });
+
+function CLEANUPCREW(input) {
+    if (input.map) {
+    return input.map(CLEANUPCREW)
+  } else {
+    return input.replace(/[^a-zA-Z]/g,'')
+  }
+}

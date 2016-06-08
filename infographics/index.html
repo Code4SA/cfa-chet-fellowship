@@ -31,6 +31,8 @@ $(document).ready(function() {
 </script>
   </head>
 
+
+
 <body style="width: 960px;">
 
 <noscript>
@@ -72,12 +74,10 @@ clipboard.on('error', function(e) {
 
     <script id="graphics-overview" type="text/x-handlebars-template">
 
-
-
-    <div class="row"><a class="anchor" id="{{category-id}}-{{id}}"</a>
+    <div class="row"><a class="anchor" id="{{category-id}}-{{clean title}}"</a>
 
 <div class="col-xs-6 vcenter">
-<a href="{{image-url}}" data-lightbox="{{id}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
+<a href="{{image-url}}" data-lightbox="{{clean title}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
 </div><!--    
 --><div class="col-xs-6 vcenter">
 <div class="well">
@@ -85,11 +85,11 @@ clipboard.on('error', function(e) {
   {{title}}
 </h4>
 <div class="share-buttons">
-  <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{id}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+  <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 
-  <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{id}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
+  <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-right" data-toggle="tooltip" title="Share on Twitter" data-placement="bottom"><i class="fa fa-twitter fa-fw"></i></a>
 </div>
 
   <table class="table table-condensed" style="margin-bottom: 0px;">
@@ -133,10 +133,10 @@ clipboard.on('error', function(e) {
   {{#if description-or-table}} 
     <p style="margin-top: 10px; margin-bottom: 5px">
   {{#if table}}
-    <a class="btn" data-toggle="collapse" href="#{{id}}-data">Data table <i class="fa fa-caret-down"></i></a>
+    <a class="btn" data-toggle="collapse" href="#{{clean title}}-data">Data table <i class="fa fa-caret-down"></i></a>
   {{/if}}
   {{#if description}}
-    <a class="btn" data-toggle="collapse" href="#{{id}}-description">Description <i class="fa fa-caret-down"></i></a>
+    <a class="btn" data-toggle="collapse" href="#{{clean title}}-description">Description <i class="fa fa-caret-down"></i></a>
     </div>
   {{/if}}
     </p>
@@ -153,7 +153,7 @@ clipboard.on('error', function(e) {
 <div class="panel panel-default panel-table">
 
 {{#if description}}
-<div id="{{id}}-description" class="panel-collapse collapse" >
+<div id="{{clean title}}-description" class="panel-collapse collapse" >
 <div class="panel-body" >
 <blockquote>
   <p>{{description}}</p>
@@ -167,14 +167,14 @@ clipboard.on('error', function(e) {
 </div>
 {{/if}}
 
-<div id="{{id}}-data" class="panel-collapse collapse">
+<div id="{{clean title}}-data" class="panel-collapse collapse">
 <div class="panel-body">
 
 {{#if table}}
 <p>
-<table id="{{id}}-table" class="table table-hover">
+<table id="{{clean title}}-table" class="table table-hover">
 {{{table}}}
-<a id="dlink" style="display:none;"></a><a class="btn" onclick="tableToExcel('{{id}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
+<a id="dlink" style="display:none;"></a><a class="btn" onclick="tableToExcel('{{clean title}}-table', '{{title}}.xls')" value="Export to Excel"><i class="fa fa-download"></i> Download data table</a>
 <p>
 {{/if}}
 
@@ -201,6 +201,12 @@ clipboard.on('error', function(e) {
  <script src="assets/js/cfamerica-lib.min.js">
 </script>
  <script src="assets/js/lightbox.min.js">
+</script>
+  <script type="text/javascript">
+Handlebars.registerHelper("clean", function(input) {
+    var output = input.toLowerCase();
+    return output.replace(/[^a-zA-Z]/g,'');
+});
 </script>
   </body>
 
