@@ -1,16 +1,16 @@
 function showInfo(e, t) {
-    if(window.location.hash) {
-    var switchTab = location.hash.substring(location.hash.lastIndexOf("#")+1,location.hash.lastIndexOf("-"));
-    pageType = switchTab;
-
-    var tabButton = "#"+switchTab;
-    $(tabButton).click();
-
-} else {
-    pageType = 'african-higher-education';
-    $("#african-higher-education").click();
-}
- 
+    if (window.top.location.hash) {
+        var switchTab = window.top.location.hash.substring(window.top.location.hash.lastIndexOf("#") + 1, window.top.location.hash.lastIndexOf("-"));
+        pageType = switchTab;
+        
+        var tabButton = "#" + switchTab;
+        $(tabButton).click();
+    
+    } else {
+        pageType = 'african-higher-education';
+        $("#african-higher-education").click();
+    }
+    
     allRows = _.sortBy(t.sheets("input").all(), "order"),
     filterByDatatype(pageType)
 }
@@ -28,12 +28,15 @@ function buildDatatypeFilter(e) {
     return e ? function(t) {
         return t["category"] === e
     }
-     : !1
+     
+    : !1
 }
 function updateCards(e, t) {
     var t = t || []
-      , a = $("#graphics-overview").html()
-      , n = Handlebars.compile(a);
+      
+    , a = $("#graphics-overview").html()
+      
+    , n = Handlebars.compile(a);
     _.chain(e).filter(function(e) {
         return _.all(t, function(t) {
             return t(e)
@@ -43,8 +46,8 @@ function updateCards(e, t) {
         $("#graphics").append(t),
         $('[data-toggle="tooltip"]').tooltip()
     })
-    if(window.location.hash) {
-        window.location.hash = window.location.hash;
+    if (window.top.location.hash) {
+        window.top.location.hash = window.top.location.hash;
     }
 
 }
@@ -55,14 +58,14 @@ $(document).ready(function() {
         parseNumbers: !0
     });
     var allRows = [];
-
-    $("#menu a").click(function(e){
+    
+    $("#menu a").click(function(e) {
         $("#menu li").removeClass('active')
         $(this).closest('li').addClass('active')
         var link = $(this).attr('id');
         filterByDatatype(link);
     });
-
+    
     $("body").on("click", "a.copy", function() {
         $("a.copy").attr('title', 'Copy URL').tooltip('fixTitle');
         $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');

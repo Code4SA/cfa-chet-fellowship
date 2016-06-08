@@ -26,6 +26,8 @@ h4 {
 
 .panel {
    border: 0;
+   box-shadow: none;
+
 }
 
 .panel-title {
@@ -134,7 +136,7 @@ a {
 	outline: none;
 }
 
-a:active {
+a:active, a img, a:active img, a:hover img {
 	outline: none;	
 }
 
