@@ -65,6 +65,7 @@ $(document).ready(function() {
         $(this).closest('li').addClass('active')
         var link = $(this).attr('id');
         filterByDatatype(link);
+        pymChild.sendHeight();
     });
     
     $("body").on("click", "a.copy", function() {
@@ -74,10 +75,7 @@ $(document).ready(function() {
 
 });
 
-function CLEANUPCREW(input) {
-    if (input.map) {
-    return input.map(CLEANUPCREW)
-  } else {
-    return input.replace(/[^a-zA-Z]/g,'')
-  }
-}
+window.setInterval(function(){
+    pymChild.sendHeight();
+}, 2000);
+

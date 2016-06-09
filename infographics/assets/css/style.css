@@ -52,11 +52,13 @@ h4 {
    position: relative;
 }
 
+.nav {
+   background-color: #333;
 }
 
-.nav {
+.navbar-inverse {
    margin-bottom: 20px;
-   background-color: #333332;
+   background-color: #FFF;
 }
 
 .cards {
@@ -76,7 +78,6 @@ blockquote {
 	border: 1px solid;
 	border-color: #e3e3e3;
 	vertical-align: middle;
-
 }
 
 .graphic-image {
@@ -99,23 +100,24 @@ blockquote {
 	padding-right: 8px;
 	border-radius: 0px;
 	text-decoration: none;
+	color: #fff;
+	outline: none;
+	border: 1px solid #333;	
+	background-color: #333;	
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-	background-color: #fff;
-	color: black;
-	outline: none;	
+	background-color: #DA4622;
+	color: #FFF;
+	outline: none;
+	border: 1px solid #DA4622;		
 }
 
 .nav-pills > li > a:hover {
 	background-color: #DA4622;
 	color: #fff;
 	outline: none;
-}
-
-.nav-pills > li > a {
-	color: #fff;
-	outline: none;
+	border: 1px solid #DA4622;	
 }
 
 .btn, .btn:focus {
@@ -213,22 +215,30 @@ a.btn {
 }
 
 .share-buttons-small {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	outline: none;
+	display:inline;
 }
 
 .share-left-small {
 	margin-right: -2px;
-	border-radius: 4px 0 0 0;
+	border-radius: 4px 0 0 4px;
+	padding: 6px
 }
 
 .share-middle-small {
 	border-radius: 0;
+	padding: 6px	
 }
 
 .share-right-small {
 	margin-left: -2px;
-	border-radius: 0 0 4px 0;
+	border-radius: 0 4px 4px 0;
+	padding: 6px	
+}
+
+.share-small, .share-small:hover, .share-small:active, .share-small:focus {
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	outline: none;
 }
