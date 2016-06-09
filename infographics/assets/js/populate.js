@@ -13,6 +13,7 @@ function showInfo(e, t) {
     
     allRows = _.sortBy(t.sheets("input").all(), "order"),
     filterByDatatype(pageType)
+    pymChild.sendHeight();
 }
 
 var allRows = [];
@@ -49,7 +50,7 @@ function updateCards(e, t) {
     if (window.location.hash) {
         window.location.hash = window.location.hash;
     }
-
+    pymChild.sendHeight();    
 }
 $(document).ready(function() {
     Tabletop.init({
