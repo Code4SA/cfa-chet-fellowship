@@ -13,7 +13,6 @@ function showInfo(e, t) {
     
     allRows = _.sortBy(t.sheets("input").all(), "order"),
     filterByDatatype(pageType)
-    pymChild.sendHeight();
 }
 
 var allRows = [];
@@ -44,13 +43,13 @@ function updateCards(e, t) {
         })
     }).map(function(e) {
         var t = n(e);
-        $("#graphics").append(t),
+        $("#graphics").append(t)
         $('[data-toggle="tooltip"]').tooltip()
     })
     if (window.location.hash) {
-        window.location.hash = window.location.hash;
+        var element = document.getElementById("doctoral-education-doctoralcompletionrates");
+        element.scrollIntoView();
     }
-    pymChild.sendHeight();    
 }
 $(document).ready(function() {
     Tabletop.init({
@@ -65,7 +64,6 @@ $(document).ready(function() {
         $(this).closest('li').addClass('active')
         var link = $(this).attr('id');
         filterByDatatype(link);
-        pymChild.sendHeight();
     });
     
     $("body").on("click", "a.copy", function() {
@@ -75,7 +73,7 @@ $(document).ready(function() {
 
 });
 
-window.setInterval(function(){
-    pymChild.sendHeight();
-}, 2000);
-
+Handlebars.registerHelper("clean", function(input) {
+    var output = input.toLowerCase();
+    return output.replace(/[^a-zA-Z]/g, '');
+});

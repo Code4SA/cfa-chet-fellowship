@@ -1,76 +1,8 @@
-  <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <title>CHET graphics</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/lightbox.css">
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="assets/js/pym.js"></script>
-
-
-<script>
 $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
-</script>
 
-<script src="assets/js/clipboard.min.js">
-</script>
-  </head>
-
-
-
-<body>
-<noscript>
-  <div style="margin-top:60px;">
-    <p>This page requires JavaScript</p>
-  </div>
-</noscript>
-
-<!-- copy to clipboard -->
-<script>
-
-
-
-var clipboard = new Clipboard('.btn');
-clipboard.on('success', function(e) {
-    console.log(e);
-});
-clipboard.on('error', function(e) {
-    console.log(e);
-});
-</script>
-
-<ul class="nav nav-pills navbar-inverse" id="menu">
-  <li><a id="african-higher-education" href="#">African Higher Education</a></li>
-  <li><a id="differentiation" href="#">Differentiation</a></li>
-  <li><a id="doctoral-education" href="#">Doctoral Education</a></li>
-  <li><a id="finances-and-fees" href="#">Finances and Fees</a></li>
-  <li><a id="knowledge-production" href="#">Knowledge Production</a></li>
-  <li><a id="south-african-post-school-system" href="#">South African Post-School System</a></li>
-</ul>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div id="graphics">
-
-        </div>
-      </div>
-    </div>
-
-    <script id="graphics-overview" type="text/x-handlebars-template">
-
-
-    <div class="row">
+<div class="row">
 
 <div class="col-xs-12 col-sm-6 vcenter">
 <a href="{{image-url}}" data-lightbox="{{clean title}}-lightbox"><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
@@ -195,24 +127,3 @@ clipboard.on('error', function(e) {
 {{else}}
 <hr style="margin-top: 20px">
 {{/if}}
-
-    </script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-</script>
- <script src="assets/js/exportexcel.js">
-</script>
- <script src="assets/js/cfamerica-lib.min.js">
-</script>
- <script src="assets/js/lightbox.min.js">
-</script>
-<script type="text/javascript">
-
-var pymChild = new pym.Child({
-    id: 'code4sa-embed-chetgraphics'
-});
-</script>
-<script src="assets/js/populate.js">
-</script>
-  </body>
-
-</html>

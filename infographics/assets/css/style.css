@@ -52,13 +52,10 @@ h4 {
    position: relative;
 }
 
-.nav {
-   background-color: #333;
-}
-
 .navbar-inverse {
    margin-bottom: 20px;
    background-color: #FFF;
+   margin-left: 65px;
 }
 
 .cards {
@@ -102,8 +99,8 @@ blockquote {
 	text-decoration: none;
 	color: #fff;
 	outline: none;
-	border: 1px solid #333;	
-	background-color: #333;	
+	border: 1px solid #2A2627;	
+	background-color: #2A2627;	
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -236,9 +233,14 @@ a.btn {
 }
 
 .share-small, .share-small:hover, .share-small:active, .share-small:focus {
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding: 6px;
 	outline: none;
+}
+
+#african-higher-education {
+	border-radius: 5px 0px 0px 5px;
+}
+
+#south-african-post-school-system {
+	border-radius: 0px 5px 5px 0px;
 }
