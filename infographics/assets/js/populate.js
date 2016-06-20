@@ -44,7 +44,6 @@ function updateCards(e, t) {
     }).map(function(e) {
         var t = n(e);
         $("#graphics").append(t)
-        $('[data-toggle="tooltip"]').tooltip()
     })
     if (window.location.hash) {
         var element = document.getElementById("doctoral-education-doctoralcompletionrates");
@@ -64,11 +63,6 @@ $(document).ready(function() {
         $(this).closest('li').addClass('active')
         var link = $(this).attr('id');
         filterByDatatype(link);
-    });
-    
-    $("body").on("click", "a.copy", function() {
-        $("a.copy").attr('title', 'Copy URL').tooltip('fixTitle');
-        $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');
     });
 
 });
