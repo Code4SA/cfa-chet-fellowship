@@ -1,1 +1,1 @@
-$.get('body.html', function(html) { $('.region-footer').prepend($.parseHTML(html, true)); })
+$.get('http://code4sa.org/cfa-chet-fellowship/infographics/body.html', function(html) { $('.region-footer').prepend($.parseHTML(html, true)); })
