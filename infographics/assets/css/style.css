@@ -1,16 +1,16 @@
 body {
    font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif;
    color: #666;
-   font-size: 12px
+   font-size: 12px !important;
 }
 
 h1 {
-	color: #DA4622;
+	color: #DA4622 !important;
 }
 
 h4 {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 16px !important;
+    font-weight: bold !important;
     color: #666;
     width: calc(100% - 85px);
 }

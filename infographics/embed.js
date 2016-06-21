@@ -13,7 +13,7 @@ $.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/boots
 					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/style.css">');
 					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/lightbox.css">');
 				    $.get('http://code4sa.org/cfa-chet-fellowship/infographics/body.html', function(html) {
-					$('.region-footer').prepend($.parseHTML(html, true));
+					$('.field-item').append($.parseHTML(html, true));
 	  				console.log("body");
 			    	});	  				
 			    });
