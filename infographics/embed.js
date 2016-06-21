@@ -8,6 +8,10 @@ $.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/boots
 		    console.log("exportexcel");
 				$.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/lightbox.min.js").done( function( ) {
 			    console.log("lightbox");
+			   		$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">');
+					$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">');
+					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/style.css">');
+					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/lightbox.css">');
 				    $.get('http://code4sa.org/cfa-chet-fellowship/infographics/body.html', function(html) {
 					$('.region-footer').prepend($.parseHTML(html, true));
 	  				console.log("body");
