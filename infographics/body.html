@@ -42,7 +42,7 @@ $(document).ready(function() {
           {{title}}
         </h4>
         <div class="share-buttons hidden-xs">
-          <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="javascript:void(0);" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+          <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="#{{category-id}}-{{clean title}}" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
           <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 
@@ -95,14 +95,6 @@ $(document).ready(function() {
             {{#if description}}
               <a class="btn" data-toggle="collapse" href="#{{clean title}}-description">Description <i class="fa fa-caret-down"></i></a>
             {{/if}}
-          </p>
-
-          <p class="share-buttons-small hidden-sm hidden-md hidden-lg">
-            <a title="Copy URL" data-clipboard-text="code4sa.org/cfa-chet-fellowship/infographics/#{{category-id}}-{{clean title}}" href="javascript:void(0);" type="button" class="btn btn-default share-small share-left-small copy" data-toggle="tooltip" data-placement="top"><i class="fa fa-link fa-fw"></i></a>
-
-            <a href="https://www.facebook.com/sharer/sharer.php?u=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share-small share-middle-small" data-toggle="tooltip" title="Share on Facebook" data-placement="top"><i class="fa fa-facebook fa-fw"></i></a>
-
-            <a href="https://twitter.com/home?status=code4sa.org/cfa-chet-fellowship/infographics/doctoral-education.html%23{{clean title}}" target="_blank" type="button" class="btn btn-default share-small share-right-small" data-toggle="tooltip" title="Share on Twitter" data-placement="top"><i class="fa fa-twitter fa-fw"></i></a>
           </p>
         {{/if}}
       </div>
