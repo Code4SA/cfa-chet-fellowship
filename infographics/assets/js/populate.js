@@ -59,8 +59,8 @@ $(document).ready(function() {
     });
     var allRows = [];
     
-    $("#menu a").click(function(e) {
-        $("#menu li").removeClass('active')
+    $("#graphic-menu a").click(function(e) {
+        $("#graphic-menu li").removeClass('active')
         $(this).closest('li').addClass('active')
         var link = $(this).attr('id');
         filterByDatatype(link);
