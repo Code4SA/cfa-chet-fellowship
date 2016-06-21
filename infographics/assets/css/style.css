@@ -1,14 +1,14 @@
-body {
+.casing {
    font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif;
    color: #666;
-   font-size: 12px !important;
+   font-size: 12px;
 }
 
-h1 {
+.casing h1 {
 	color: #DA4622 !important;
 }
 
-h4 {
+.casing h4 {
     font-size: 16px !important;
     font-weight: bold !important;
     color: #666;
@@ -16,7 +16,7 @@ h4 {
 }
 
 @media (max-width: 768px) {
-	h4 {
+	.casing h4 {
     font-size: 16px;
     font-weight: bold;
     color: #666;
@@ -24,26 +24,26 @@ h4 {
 	}
 }
 
-.row {
+.casing .row {
    margin-right:0;
    margin-left:0;
 }
 
-.panel-table {
+.casing .panel-table {
    border: 0;
 }
 
-.panel {
+.casing .panel {
    border: 0;
    box-shadow: none;
 
 }
 
-.panel-title {
+.casing .panel-title {
    color: #FFF;
 }
 
-.well {
+.casing .well {
    margin-top: 0;
    margin-bottom: 0;
    padding-top: 10px;
@@ -52,47 +52,47 @@ h4 {
    position: relative;
 }
 
-.navbar-inverse {
+.casing .navbar-inverse {
    margin-bottom: 20px;
    background-color: #FFF;
    margin-left: 65px;
 }
 
-.cards {
+.casing .cards {
    margin-top: 60px;
 }
 
-hr {
+.casing hr {
    margin-top: 0px;
 }
 
-blockquote {
+.casing blockquote {
    padding-bottom: 0px;
    font-size: inherit;
 }
 
-.graphic-entry {
+.casing .graphic-entry {
 	border: 1px solid;
 	border-color: #e3e3e3;
 	vertical-align: middle;
 }
 
-.graphic-image {
+.casing .graphic-image {
 	padding-left: 0;
 }
 
-.graphic-data {
+.casing .graphic-data {
 	padding-right: 0;
 	margin-top: 10px;
 }
 
-.vcenter {
+.casing .vcenter {
     display: inline-block;
     vertical-align: top;
     float: none;
 }
 
-.nav-pills > li > a {
+.casing .nav-pills > li > a {
 	padding-left: 8px;
 	padding-right: 8px;
 	border-radius: 0px;
@@ -103,21 +103,21 @@ blockquote {
 	background-color: #2A2627;	
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+.casing .nav-pills > li.active > a, .casing .nav-pills > li.active > a:hover, .casing .nav-pills > li.active > a:focus {
 	background-color: #DA4622;
 	color: #FFF;
 	outline: none;
 	border: 1px solid #DA4622;		
 }
 
-.nav-pills > li > a:hover {
+.casing .nav-pills > li > a:hover {
 	background-color: #DA4622;
 	color: #fff;
 	outline: none;
 	border: 1px solid #DA4622;	
 }
 
-.btn, .btn:focus {
+.casing .btn, .casing .btn:focus {
 	background: #999;
 	color: #fff;
 	border: 0px solid transparent;
@@ -126,35 +126,35 @@ blockquote {
 	outline: none;
 }
 
-.btn:hover {
+.casing .btn:hover {
 	background: #DA4622;
 	color: #fff;
 	outline: none;
 }
 
-.btn:active, .btn:active:focus, .btn.active {
+.casing .btn:active, .btn:active:focus, .btn.active {
 	background: #DA4622;
 	color: #fff;
 	outline: none;
 }
 
-a {
+.casing a {
 	color: inherit;
 	text-decoration: underline;
 	outline: none;
 }
 
-a:active, a img, a:active img, a:hover img {
+.casing a:active, a img, a:active img, a:hover img {
 	outline: none;	
 }
 
-a:hover{
+.casing a:hover{
 	color: #DA4622;
 	text-decoration: none;
 	outline: none;
 }
 
-a.anchor {
+.casing a.anchor {
     display: block;
     position: relative;
     top: -42px;
@@ -162,12 +162,12 @@ a.anchor {
     outline: none;
 }
 
-a.btn {
+.casing a.btn {
 	text-decoration: none;
 	outline: none;
 
 }
-.share, .share:hover, .share:active, .share:focus {
+.casing .share, .casing .share:hover, .casing .share:active, .casing .share:focus {
 	padding-left: 6px;
 	padding-right: 6px;
 	padding-top: 4px;
@@ -175,64 +175,64 @@ a.btn {
 	outline: none;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.casing .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
 	border-radius: inherit;
 }
 
-.share-buttons {
+.casing .share-buttons {
 	position: absolute;
 	right: 0px;
 	top: 0px;
 	outline: none;
 }
 
-.share-left {
+.casing .share-left {
 	margin-right: -2px;
 	border-radius: 0 0 0 4px;
 }
 
-.share-middle {
+.casing .share-middle {
 	border-radius: 0;
 }
 
-.share-right {
+.casing .share-right {
 	margin-left: -2px;
 	border-radius: 0 4px 0 0;
 }
 
-.table > tbody > tr > th {
+.casing .table > tbody > tr > th {
 	border-top: 0px solid transparent;
 	border-bottom: 2px solid #ddd;
 }
 
-.table-title {
+.casing .table-title {
 	border-bottom: 0px solid #ddd;
 	border-top: 0px solid #ddd;
 	color: #DA4622;
 }
 
-.share-buttons-small {
+.casing .share-buttons-small {
 	display:inline;
 }
 
-.share-left-small {
+.casing .share-left-small {
 	margin-right: -2px;
 	border-radius: 4px 0 0 4px;
 	padding: 6px
 }
 
-.share-middle-small {
+.casing .share-middle-small {
 	border-radius: 0;
 	padding: 6px	
 }
 
-.share-right-small {
+.casing .share-right-small {
 	margin-left: -2px;
 	border-radius: 0 4px 4px 0;
 	padding: 6px	
 }
 
-.share-small, .share-small:hover, .share-small:active, .share-small:focus {
+.casing .share-small, .casing .share-small:hover, .casing .share-small:active, .casing .share-small:focus {
 	padding: 6px;
 	outline: none;
 }
