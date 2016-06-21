@@ -1,4 +1,10 @@
 .casing {
+	 font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif !important;
+   color: #666 !important;;
+   font-size: 12px !important;;
+}
+
+.casing p {
    font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif;
    color: #666;
    font-size: 12px;
