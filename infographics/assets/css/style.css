@@ -1,7 +1,11 @@
+#block-superfish-1 {
+	margin-bottom: 0;
+}
+
 .casing {
-	 font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif !important;
-   color: #666 !important;;
-   font-size: 12px !important;;
+	font-family: "Nimbus Sans L",Arial,Helvetica,sans-serif !important;
+	color: #666 !important;;
+	font-size: 12px !important;;
 }
 
 .casing p {

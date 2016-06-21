@@ -6,12 +6,12 @@ $.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/boots
 	    console.log("clipboard");
 		    $.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/exportexcel.js").done( function( ) {
 		    console.log("exportexcel");
-				$.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/lightbox.min.js").done( function( ) {
-			    console.log("lightbox");
+				$.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/lity.min.js").done( function( ) {
+			    console.log("lity");
 			   		$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">');
 					$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">');
 					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/style.css">');
-					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/lightbox.css">');
+					$('head').append('<link rel="stylesheet" href="http://code4sa.org/cfa-chet-fellowship/infographics/assets/css/lity.min.css">');
 				    $.get('http://code4sa.org/cfa-chet-fellowship/infographics/body.html', function(html) {
 					$('.field-item').append($.parseHTML(html, true));
 	  				console.log("body");
