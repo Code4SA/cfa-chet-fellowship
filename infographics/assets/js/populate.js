@@ -48,8 +48,8 @@ function updateCards(e, t) {
     })
     if (window.location.hash) {
         var anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
-        var withHash = "#" + anchorScroll;
-        withHash.scrollIntoView();
+        var element = "#" + anchorScroll;
+        element.scrollIntoView();
     }
 }
 $(document).ready(function() {
