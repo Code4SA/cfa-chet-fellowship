@@ -31,7 +31,7 @@ $(document).ready(function() {
     <script id="graphics-overview" type="text/x-handlebars-template">
 
 
-    <div id="{{category-id}}-{{clean title}}" class="row">
+    <div id="{{category-id}}|{{clean title}}" class="row">
 
 <div class="col-xs-12 col-sm-6 vcenter">
 <a href="{{image-url}}" data-lity><img src="{{thumbnail-url}}" width=100% style="border-radius: 4px"></a>
@@ -42,7 +42,7 @@ $(document).ready(function() {
           {{title}}
         </h4>
         <div class="share-buttons hidden-xs">
-          <a title="Copy URL" data-clipboard-text="http://www.chet.org.za/data/infographics#{{category-id}}|{{clean title}}" href="#{{category-id}}-{{clean title}}" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
+          <a title="Copy URL" data-clipboard-text="http://www.chet.org.za/data/infographics#{{category-id}}|{{clean title}}" href="#{{category-id}}|{{clean title}}" type="button" class="btn btn-default share share-left copy" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-link fa-fw"></i></a>
 
           <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.chet.org.za/data/infographics#{{category-id}}|{{clean title}}" target="_blank" type="button" class="btn btn-default share share-middle" data-toggle="tooltip" title="Share on Facebook" data-placement="bottom"><i class="fa fa-facebook fa-fw"></i></a>
 

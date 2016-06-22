@@ -2,7 +2,12 @@ function showInfo(e, t) {
     var pageType ='african-higher-education';
     var anchorScroll; 
     if (window.location.hash) {
-        pageType = location.hash.substring(location.hash.lastIndexOf("#") + 1, location.hash.lastIndexOf("|"));
+        if (window.location.hash.indexOf('|') > -1) {
+            pageType = location.hash.substring(location.hash.lastIndexOf("#") + 1, location.hash.lastIndexOf("|"));
+        }
+        else {
+            pageType = location.hash.substring(location.hash.lastIndexOf("#") + 1);
+        }
         anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
     }
     
