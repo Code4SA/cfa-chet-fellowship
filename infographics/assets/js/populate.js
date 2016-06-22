@@ -48,7 +48,7 @@ function updateCards(e, t) {
     })
     if (window.location.hash) {
         var anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
-        var element = "#" + anchorScroll;
+        var element = document.getElementById("#" + anchorScroll);
         element.scrollIntoView();
     }
 }
