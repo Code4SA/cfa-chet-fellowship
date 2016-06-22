@@ -103,8 +103,8 @@
 	text-decoration: none;
 	color: #fff;
 	outline: none;
-	border: 1px solid #2A2627;	
-	background-color: #2A2627;	
+	border: 1px solid #333;	
+	background-color: #333;	
 }
 
 .casing .nav-pills > li.active > a, .casing .nav-pills > li.active > a:hover, .casing .nav-pills > li.active > a:focus {

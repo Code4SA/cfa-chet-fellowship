@@ -47,8 +47,9 @@ function updateCards(e, t) {
         $('[data-toggle="tooltip"]').tooltip()
     })
     if (window.location.hash) {
-        var element = document.getElementById("doctoral-education-doctoralcompletionrates");
-        element.scrollIntoView();
+        var anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
+        var withHash = "#" + anchorScroll;
+        withHash.scrollIntoView();
     }
 }
 $(document).ready(function() {
