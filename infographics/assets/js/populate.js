@@ -1,22 +1,20 @@
 function showInfo(e, t) {
+    var pageType ='african-higher-education';
+    var anchorScroll; 
     if (window.location.hash) {
-        var switchTab = location.hash.substring(location.hash.lastIndexOf("#") + 1, location.hash.lastIndexOf("-"));
-        pageType = switchTab;
-        
-        var tabButton = "#" + switchTab;
-        $(tabButton).click();
-    
-    } else {
-        pageType = 'african-higher-education';
-        $("#african-higher-education").click();
+        pageType = location.hash.substring(location.hash.lastIndexOf("#") + 1, location.hash.lastIndexOf("-"));
+        anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
     }
     
     allRows = _.sortBy(t.sheets("input").all(), "order"),
-    filterByDatatype(pageType)
+    $('#' + pageType).click();
+    
+    if (anchorScroll) {
+      var element = document.getElementById(anchorScroll);
+      element.scrollIntoView();
+    }
 }
-
 var allRows = [];
-
 function filterByDatatype(e) {
     clearCards(),
     updateCards(allRows, [buildDatatypeFilter(e)])
@@ -46,11 +44,7 @@ function updateCards(e, t) {
         $("#graphics").append(t)
         $('[data-toggle="tooltip"]').tooltip()
     })
-    if (window.location.hash) {
-        var anchorScroll = location.hash.substring(location.hash.lastIndexOf("#") + 1);
-        var element = document.getElementById("#" + anchorScroll);
-        element.scrollIntoView();
-    }
+
 }
 $(document).ready(function() {
     Tabletop.init({
@@ -71,9 +65,7 @@ $(document).ready(function() {
         $("a.copy").attr('title', 'Copy URL').tooltip('fixTitle');
         $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');
     });
-
 });
-
 Handlebars.registerHelper("clean", function(input) {
     var output = input.toLowerCase();
     return output.replace(/[^a-zA-Z]/g, '');
