@@ -1,4 +1,4 @@
-$.getScript("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js").done( function( ) {
+$.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/bootstrap.min.js").done( function( ) {
 	console.log("bootstrap");
     $.getScript("http://code4sa.org/cfa-chet-fellowship/infographics/assets/js/cfamerica-lib.min.js").done( function( ) {
     console.log("code4america");
