@@ -1,0 +1,16 @@
+body {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+	text-align: left;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+	padding: 10px 10px;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+	padding: 10px 10px 6px 10px;
+}
